@@ -1,0 +1,60 @@
+
+
+{
+    "status": "ok",
+    "totalResults": 4,
+    "articles": [
+      {
+        "source": {
+          "id": "bbc-news",
+          "name": "BBC News"
+        },
+        "author": "BBC News",
+        "title": "Benjamin Kiplagat: Ugandan athlete stabbed to death in Kenya - reports",
+        "description": "Benjamin Kiplagat, 34, reached the semi-finals of the 2012 London Olympics in the 3,000m steeplechase.",
+        "url": "https://www.bbc.co.uk/news/world-africa-67853338",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/B5FB/production/_132178564_benjamin.jpg",
+        "publishedAt": "2024-01-01T11:22:15.7682965Z",
+        "content": "Benjamin Kiplagat, who has represented Uganda at three Olympic Games, has been found dead in Kenya, with local reports saying he had been stabbed.\r\nKiplagat, 34, reached the semi-finals of the 2012 L… [+345 chars]"
+      },
+      {
+        "source": {
+          "id": "reuters",
+          "name": "Reuters"
+        },
+        "author": "Reuters",
+        "title": "Macron says 2024, marked by Olympics, will be year of French pride and hope",
+        "description": "President Emmanuel Macron vowed on Sunday that 2024 will be the year of French pride and hope, marked by the Paris 2024 Olympic Summer Games and the re-opening of Notre-Dame cathedral after a devastating fire.",
+        "url": "https://www.reuters.com/world/europe/macron-says-2024-marked-by-olympics-will-be-year-french-pride-hope-2023-12-31/",
+        "urlToImage": "https://www.reuters.com/resizer/rtxQbSQy3RQlK3f5OE1ROU6uSsY=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZLAXBJAMRRM6NAUKCBUXPVU54A.jpg",
+        "publishedAt": "2023-12-31T19:51:08Z",
+        "content": "PARIS, Dec 31 (Reuters) - President Emmanuel Macron vowed on Sunday that 2024 will be the year of French pride and hope, marked by the Paris 2024 Olympic Summer Games and the re-opening of Notre-Dame… [+978 chars]"
+      },
+      {
+        "source": {
+          "id": "the-hindu",
+          "name": "The Hindu"
+        },
+        "author": "PTI",
+        "title": "Tokyo Olympics | Deepika ninth in ranking round; Koreans top-two",
+        "description": "The performances will determine the seedings for the elimination rounds.",
+        "url": "https://www.thehindu.com/sport/tokyo-olympics-deepika-ninth-in-ranking-round-koreans-top-two/article35481902.ece",
+        "urlToImage": "https://www.thehindu.com/sport/uvmmr0/article35481908.ece/ALTERNATES/LANDSCAPE_615/thnak1330128994jpg",
+        "publishedAt": "2021-07-23T03:40:59Z",
+        "content": "Star Indian archer Deepika Kumari finished ninth in the womens individual ranking round as the countrys Olympic campaign kickstarted at the Yumenoshima Park in Tokyo on Friday.\r\n The world No.1 finis… [+1117 chars]"
+      },
+      {
+        "source": {
+          "id": "the-hindu",
+          "name": "The Hindu"
+        },
+        "author": "The Hindu",
+        "title": "In search of gold: On Tokyo Olympics",
+        "description": "The Olympic Games remain the greatest sporting event for fans and athletes alike",
+        "url": "https://www.thehindu.com/opinion/editorial/in-search-of-gold-the-hindu-editorial-on-tokyo-olympics-2021/article35478354.ece",
+        "urlToImage": "https://www.thehindu.com/static/theme/default/base/img/og-image.jpg",
+        "publishedAt": "2021-07-22T18:32:00Z",
+        "content": "A medal can lose its lustre but the athletes sporting immortality is set in stone, such is the enduring allure of triumphs at the Olympics. Even a participant without any titles, is referred to as an… [+2521 chars]"
+      }
+    ]
+  }
