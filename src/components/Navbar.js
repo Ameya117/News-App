@@ -1,47 +1,47 @@
 import React from 'react'
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Navbar(){
-    return (
-      <div>
-        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark " >
-          <div className="container-fluid " >
-            <Link className="navbar-brand  " to="/">News</Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">General</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/business">Business</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/technology">Technology</Link>
-                </li>
+export default function Navbar(props) {
+  return (
 
-                <li className="nav-item">
-                  <Link className="nav-link" to="/health">Health</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/sports">Sports</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/science">Science</Link>
-                </li>
+    <nav className={`navbar fixed-top navbar-expand-lg navbar-${props.mode} bg-${props.mode} rounded`}>
+      <div className="container-fluid "  >
+        <Link className="navbar-brand" to="/">News</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" style={{ color: props.textColor }} id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">General</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/business">Business</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/technology">Technology</Link>
+            </li>
 
-              </ul>
-              {/* <div className="form-check form-switch">
-                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >Dark mode</label>
-              </div> */}
-            </div>
+            <li className="nav-item">
+              <Link className="nav-link" to="/health">Health</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/sports">Sports</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/science">Science</Link>
+            </li>
+
+          </ul>
+          <div className="form-check form-switch">
+            <input className="form-check-input text-" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode} />
+            Dark mode
           </div>
-        </nav>
+        </div>
       </div>
-    )
-  
+    </nav>
+
+  )
+
 }
 

@@ -13,7 +13,6 @@ export default function News(props) {
   const [totalResults, setTotalResults] = useState(0);
   const [progress, setProgress] = useState(0);
 
-
   const updateNews = async () => {
     setProgress(progress + 25);
     let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
@@ -33,22 +32,18 @@ export default function News(props) {
     // eslint-disable-next-line
   }, [])
 
-
-
   const fetchMoreData = async () => {
     setPage(page + 1);
     let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
-    setLoading(true);
     let data = await fetch(url);
     let parsedData = await data.json();
     setTotalResults(parsedData.totalResults);
     setArticles(parsedData.articles.concat(parsedData.articles));
-    setLoading(false);
   };
 
   return (
     <>
-      <h1 className="text-center" id="page-title" style={{ margin: '200px 20px 0px 20px', marginTop: '80px' }}>{`${props.category.charAt(0).toUpperCase() + props.category.slice(1)} - Top headlines`}</h1>
+      <h1 className="text-center" id="page-title" style={{ margin: '80px 20px 0px 20px' }}>{`${props.category.charAt(0).toUpperCase() + props.category.slice(1)} - Top headlines`}</h1>
       <div>
         <LoadingBar
           color='#f11946'
@@ -60,14 +55,20 @@ export default function News(props) {
       <InfiniteScroll
         dataLength={articles.length}
         next={fetchMoreData}
-        hasMore={articles.length !== totalResults}
+        hasMore={articles.length<totalResults}
         loader={<Spinner />}
+        endMessage={
+          <p style={{ textAlign: "center" }}>
+            <b>Yay! You have seen it all</b>
+          </p>
+        }
+        
       >
         < div className="container">
           <div className="row">
             {articles.map((element) => {
               return <div className="col-md-4" key={element.url}>
-                <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imgUrl={element.urlToImage ? element.urlToImage : "https://vskills.in/certification/blog/wp-content/uploads/2015/01/structure-of-a-news-report.jpg"} newsUrl={element.url} date={element.publishedAt} author={element.author} />
+                <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imgUrl={element.urlToImage ? element.urlToImage : "https://vskills.in/certification/blog/wp-content/uploads/2015/01/structure-of-a-news-report.jpg"} newsUrl={element.url} date={element.publishedAt} author={element.author} mode={props.mode} textColor={props.textColor} backgroundColor={props.backgroundColor} toggleMode={props.toggleMode} buttonMode={props.buttonMode} />
               </div>
             })}
           </div>
